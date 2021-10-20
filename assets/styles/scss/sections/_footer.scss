@@ -1,0 +1,188 @@
+footer {
+  background-color: $dark-color;
+  @include bold-grey-font;
+  padding-top: 2rem;
+  .container {
+    .row {
+      border-bottom: 1px solid $border-color;
+      padding: 1.5rem 0;
+      .col {
+        padding: 1rem;
+        .social-links {
+          @include flex-center;
+          justify-content: flex-start;
+          li {
+            margin-right: 0.7rem;
+            height: 2.5rem;
+            width: 2.5rem;
+            background-color: $border-color;
+            border-radius: 50%;
+            @include flex-center;
+            justify-content: center;
+            i {
+              color: $light-color;
+              margin-right: 0;
+            }
+          }
+        }
+        h4 {
+          color: $light-color;
+        }
+        ul {
+          li {
+            margin: 0.4rem 0;
+            i {
+              margin-right: 1rem;
+            }
+            span {
+              a {
+                color: $grey-color;
+              }
+            }
+          }
+        }
+        form {
+          margin: 1rem 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          input {
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+          }
+          button {
+            background-color: $primary-color;
+            margin-left: 0;
+            padding: 0.8rem 1.5rem;
+            i {
+              color: $light-color;
+            }
+          }
+        }
+      }
+    }
+    .row2 {
+      .col2,
+      .col3 {
+        ul {
+          li {
+            padding-left: 1rem;
+            position: relative;
+            &::before {
+              content: '>';
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 3rem 0rem 1rem 0;
+    .container {
+      margin: 0 2.5rem;
+      .row {
+        display: grid;
+        grid-template-columns: 33% auto;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0;
+        .col {
+          padding: 0;
+          h4 {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .row2 {
+        grid-template-columns: 48% auto 30%;
+        border-bottom: none;
+        .col2,
+        .col3 {
+          ul {
+            li {
+              padding-left: 1rem;
+              position: relative;
+              &::before {
+                content: '>';
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+          }
+        }
+        .col4 {
+          min-width: 25rem;
+        }
+      }
+    }
+    .container2 {
+      .row {
+        display: block;
+        border-bottom: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    .container {
+      .row {
+        display: grid;
+        grid-template-columns: 23% auto 20%;
+        padding: 2rem 0;
+        .col {
+          padding: 0;
+        }
+      }
+      .row2 {
+        grid-template-columns: auto auto auto 30%;
+        border-bottom: none;
+        .col2,
+        .col3 {
+          ul {
+            li {
+              padding-left: 1rem;
+              position: relative;
+              &::before {
+                content: '>';
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+          }
+        }
+        .col4 {
+          min-width: unset;
+        }
+      }
+    }
+    .container2 {
+      .row {
+        display: block;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+}

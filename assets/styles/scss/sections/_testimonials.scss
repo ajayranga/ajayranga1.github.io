@@ -1,0 +1,151 @@
+section.testimonials {
+  padding: 4.5rem 0 4rem 0;
+  text-align: center;
+  span {
+    color: $grey-color;
+  }
+  h2 {
+    margin: 0 1rem;
+    span {
+      color: $primary-color;
+      font-weight: $bold;
+      font-family: $light-font;
+    }
+  }
+  .comments {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem 0 2rem 0;
+    margin-left: 0;
+    transition: margin-left $animation-time cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    li {
+      .comment {
+        width: 100vw;
+        position: relative;
+        padding: 0 1rem 1.5rem 6rem;
+        &::before {
+          content: '';
+          height: 2.7rem;
+          width: 3rem;
+          background: url('../../assets/images/quote.png') no-repeat;
+          position: absolute;
+          top: 0;
+          left: 1rem;
+        }
+        h3 {
+          text-overflow: ellipsis;
+          &::before {
+            content: open-quote;
+          }
+          &::after {
+            content: close-quote;
+          }
+        }
+        h4 {
+          margin: 2rem 0 0.5rem 0;
+        }
+        p {
+          font-weight: $bold;
+          color: $grey-color;
+          margin-top: 1rem;
+          margin-right: 2rem;
+        }
+        .ratings {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 0.3rem 0 1rem 0;
+          i {
+            color: $primary-color;
+            margin-right: 0.2rem;
+          }
+        }
+        .imgwrapper {
+          height: 4.5rem;
+          width: 4.5rem;
+          border-radius: 50%;
+          margin: 1rem 0 1rem 0;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      height: 0.75rem;
+      width: 0.75rem;
+      border-radius: 50%;
+      background-color: rgba($grey-color, 0.5);
+      margin-right: 1rem;
+
+      transition: all $animation-time cubic-bezier(0.4, 0, 0.2, 1);
+      &.active {
+        background-color: $primary-color;
+      }
+      &:hover {
+        background-color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  section.testimonials {
+    padding: 5rem 0 4.5rem 0;
+    .comments {
+      li {
+        .comment {
+          padding: 0 3rem 0 7rem;
+          &::before {
+            left: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  section.testimonials {
+    .comments {
+      li {
+        .comment {
+          width: 500px;
+          padding: 0 0.5rem 0 8rem;
+          &::before {
+            left: 3rem;
+          }
+        }
+      }
+    }
+    .carousel-dots {
+      .dot-4,
+      .dot-5,
+      .dot-6 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  section.testimonials {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    .comments {
+      li {
+        .comment {
+          width: 600px;
+        }
+      }
+    }
+  }
+}

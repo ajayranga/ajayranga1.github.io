@@ -1,0 +1,21 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin primary-btn {
+  background-color: $primary-color;
+  padding: 0.85rem 1.5rem;
+  color: $light-color;
+}
+
+@mixin bold-grey-font {
+  font-weight: $bold;
+  color: $grey-color;
+}
+@mixin centerIt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
