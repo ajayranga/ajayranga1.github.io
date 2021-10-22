@@ -1,12 +1,12 @@
 header {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   width: 100vw;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   left: 0;
   .container {
-    padding: $padding-mob;
+    padding: var(--padding-mob);
     padding-right: 1.5rem;
     @include flex-center;
     nav {
@@ -25,25 +25,27 @@ header {
             input {
               position: absolute;
               top: 0rem;
-              right: 2.65rem;
+              right: 2.6rem;
               border-radius: 1.5rem 0 0 1.5rem;
               translate: 0.75rem;
-              transition: all $animation-time ease-in;
+              transition: all var(--animation-time) ease-in;
               width: 0;
               padding-left: 0;
               padding-right: 0;
             }
             button {
-              transition: all $animation-time ease-in;
+              transition: all var(--animation-time) ease-in;
               outline: none;
               border: 0;
               padding: 0.65rem 0.65rem 0.6rem 0.65rem;
               border-radius: 50%;
               cursor: text;
+              background-color: var(--light-color);
+              color: var(--dark-color);
             }
             &.open {
               input {
-                padding: 0.62rem 1rem;
+                padding: 0.55rem 1rem;
                 top: 0rem;
                 width: 10rem;
               }
@@ -66,17 +68,17 @@ header {
               border-radius: 50%;
             }
             .my-moon {
-              box-shadow: inset 0.35rem -0.35rem 0rem 0.15rem $light-color;
-              transition: all $animation-time ease-in;
+              box-shadow: inset 0.35rem -0.35rem 0rem 0.15rem var(--white-color);
+              transition: all var(--animation-time) ease-in;
             }
             .my-sun {
-              background-color: $light-color;
-              outline: 2px dashed $light-color;
+              background-color: var(--white-color);
+              outline: 2px dashed var(--white-color);
               outline-offset: 2px;
               -moz-outline-radius: 100%;
               width: 0;
               outline: 0;
-              transition: all $animation-time ease-in;
+              transition: all var(--animation-time) ease-in;
             }
           }
           .dark {
@@ -86,23 +88,23 @@ header {
             }
             .my-sun {
               width: 1.25rem;
-              outline: 2px dashed $light-color;
+              outline: 2px dashed var(--white-color);
             }
           }
           .menu-btn {
-            border: 1px solid $light-color;
+            border: 1px solid var(--white-color);
             border-radius: 0.25rem;
             padding: 0.45rem;
             background-color: transparent;
             display: flex;
             width: 2.25rem;
             i {
-              color: $light-color;
-              font-weight: $bold;
+              color: var(--white-color);
+              font-weight: var(--bold);
               overflow: hidden;
               width: 100%;
               object-position: center;
-              transition: all $animation-time ease;
+              transition: all var(--animation-time) ease;
             }
             :nth-child(even) {
               width: 0;
@@ -125,29 +127,29 @@ header {
             flex-direction: column;
             justify-items: flex-start;
             align-items: center;
-            background-color: $primary-color;
-            transition: all $animation-time ease-in;
+            background-color: var(--primary-color);
+            transition: all var(--animation-time) ease-in;
             height: 0;
             overflow: hidden;
             padding: 0rem 2rem 0rem 1rem;
             li {
-              background-color: $light-color;
+              background-color: var(--light-color);
               padding: 0.5rem 0;
               width: 100%;
               text-align: center;
               a {
-                font-weight: $bold;
-                color: $dark-color;
+                font-weight: var(--bold);
+                color: var(--dark-color);
               }
               &:first-child {
                 a {
-                  color: $primary-color;
+                  color: var(--primary-color);
                 }
               }
               &:hover {
-                background-color: $primary-color;
+                background-color: var(--primary-color);
                 a {
-                  color: $light-color;
+                  color: var(--light-color);
                 }
               }
             }
@@ -215,8 +217,8 @@ header {
           li {
             margin-right: 2rem;
             a {
-              color: $light-color;
-              font-weight: $bold;
+              color: var(--white-color);
+              font-weight: var(--bold);
             }
           }
         }

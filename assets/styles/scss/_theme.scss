@@ -3,8 +3,9 @@
 @import './abstract/functions';
 @import './abstract/classes';
 body {
-  font-family: $light-font;
-  color: $dark-color;
+  font-family: var(--light-font);
+  color: var(--dark-color);
+  background-color: var(--light-color);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -22,19 +23,19 @@ h1,
 h2 {
   font-family: 'Lora', serif;
   font-size: 1.875rem;
-  font-weight: $bold;
+  font-weight: var(--bold);
   line-height: 2.1rem;
   margin-bottom: 0.75rem;
 }
 h3 {
   font-size: 1.5rem;
-  font-weight: $bold;
+  font-weight: var(--bold);
   line-height: 1.75rem;
   margin-bottom: 0.5rem;
 }
 h4 {
   font-size: 1.15rem;
-  font-weight: $bold;
+  font-weight: var(--bold);
   line-height: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -52,13 +53,13 @@ h2,
 h3 {
   span {
     font-size: inherit;
-    font-weight: $bold;
+    font-weight: var(--bold);
   }
 }
 a {
   font-size: 1rem;
   line-height: 1.75rem;
-  color: $dark-color;
+  color: var(--dark-color);
   &:link {
     text-decoration: none;
   }
@@ -75,7 +76,8 @@ textarea {
   padding: 0.15rem 0.25rem;
 }
 button {
-  background-color: $white-color;
+  background-color: var(--white-color);
+  color: var(--dark-color);
   margin: 0 0.15rem;
   outline: none;
   border: 0;
@@ -92,11 +94,13 @@ input[type='email'] {
   border: none;
   outline: none;
   font-size: 1.15rem;
+  background-color: var(--light-color);
+  color: var(--dark-color);
   &::placeholder {
-    color: $grey-color;
+    color: var(--grey-color);
     font-family: sans-serif;
     font-size: 1rem;
-    font-weight: $bold;
+    font-weight: var(--bold);
   }
 }
 img {

@@ -1,6 +1,8 @@
 section.about {
-  padding: $padding-mob;
-  margin-bottom: 4rem;
+  padding: var(--padding-mob);
+  padding-bottom: 3rem;
+  padding-top: 4.5rem;
+  background-color: var(--light-color);
   .row {
     h3 {
       margin-bottom: 1rem;
@@ -8,11 +10,11 @@ section.about {
         font-family: serif;
         font-weight: 500;
         &:last-child {
-          font-family: $light-font;
-          background-color: $primary-color;
-          color: $light-color;
+          font-family: var(--light-font);
+          background-color: var(--primary-color);
+          color: var(--light-color);
           padding: 0 0.5rem;
-          font-weight: $bold;
+          font-weight: var(--bold);
         }
       }
     }
@@ -20,24 +22,25 @@ section.about {
       margin-bottom: 1rem;
       font-weight: normal;
       span {
-        color: $primary-color;
-        font-family: $light-font;
-        font-weight: $bold;
+        color: var(--primary-color);
+        font-family: var(--light-font);
+        font-weight: var(--bold);
       }
     }
     p {
-      font-weight: $bold;
+      font-weight: var(--bold);
       margin-top: 1.5rem;
-      color: $grey-color;
+      color: var(--grey-color);
       &:first-of-type {
-        color: $dark-color;
+        color: var(--dark-color);
         font-style: italic;
       }
     }
     figure {
       margin: 2rem 0.8rem;
       height: 7rem;
-      width: 7rem;
+      width: 8rem;
+      background-color: var(--white-color);
     }
     .about-image {
       margin-top: 2rem;
@@ -48,7 +51,7 @@ section.about {
         width: 60%;
         max-width: 18rem;
         margin-bottom: 15%;
-        background-color: $light-color;
+        background-color: var(--light-color);
         &:last-child {
           position: absolute;
           top: 15%;
@@ -63,7 +66,7 @@ section.about {
 }
 @media only screen and (min-width: 768px) {
   section.about {
-    padding: 1rem 2.5rem;
+    padding: 6rem 2.5rem 5rem;
     .row1 {
       p {
         margin-top: 1.2rem;

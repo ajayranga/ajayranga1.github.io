@@ -1,15 +1,16 @@
 section.testimonials {
   padding: 4.5rem 0 4rem 0;
   text-align: center;
+  background-color: var(--light-color);
   span {
-    color: $grey-color;
+    color: var(--grey-color);
   }
   h2 {
     margin: 0 1rem;
     span {
-      color: $primary-color;
-      font-weight: $bold;
-      font-family: $light-font;
+      color: var(--primary-color);
+      font-weight: var(--bold);
+      font-family: var(--light-font);
     }
   }
   .comments {
@@ -20,7 +21,7 @@ section.testimonials {
     align-items: flex-start;
     padding: 2.5rem 0 2rem 0;
     margin-left: 0;
-    transition: margin-left $animation-time cubic-bezier(0.4, 0, 0.2, 1);
+    transition: margin-left var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     li {
       .comment {
@@ -49,8 +50,8 @@ section.testimonials {
           margin: 2rem 0 0.5rem 0;
         }
         p {
-          font-weight: $bold;
-          color: $grey-color;
+          font-weight: var(--bold);
+          color: var(--grey-color);
           margin-top: 1rem;
           margin-right: 2rem;
         }
@@ -60,7 +61,7 @@ section.testimonials {
           align-items: center;
           margin: 0.3rem 0 1rem 0;
           i {
-            color: $primary-color;
+            color: var(--primary-color);
             margin-right: 0.2rem;
           }
         }
@@ -82,15 +83,15 @@ section.testimonials {
       height: 0.75rem;
       width: 0.75rem;
       border-radius: 50%;
-      background-color: rgba($grey-color, 0.5);
+      background-color: var(--light-grey-color);
       margin-right: 1rem;
 
-      transition: all $animation-time cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
       &.active {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
       }
       &:hover {
-        background-color: $primary-color;
+        background-color: var(--primary-color);
         cursor: pointer;
       }
     }

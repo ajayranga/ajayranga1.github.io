@@ -9,15 +9,15 @@
   animation: hide-animation 2s;
 }
 .navlogo {
-  color: $light-color;
-  font-weight: $bolder;
+  color: var(--white-color);
+  font-weight: var(--bolder);
   position: relative;
   font-size: 1.85rem;
   &::before {
     content: '';
     height: 0.25rem;
     width: 1.5rem;
-    background-color: $light-color;
+    background-color: var(--white-color);
     position: absolute;
     top: 0.35rem;
     left: 2rem;

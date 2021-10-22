@@ -1,6 +1,18 @@
 section.highlights {
   position: relative;
-  margin-bottom: 4rem;
+  z-index: 2;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--translucent-color);
+    z-index: -1;
+  }
   .carousel {
     display: flex;
     flex-direction: row;
@@ -8,11 +20,12 @@ section.highlights {
     align-items: center;
     overflow: hidden;
     margin-left: 0;
-    transition: margin-left $animation-time cubic-bezier(0.4, 0, 0.2, 1);
+    transition: margin-left var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
     .slide {
       figure {
         width: 100vw;
         height: 100vh;
+        max-height: 100rem;
         position: relative;
         img {
           width: 100%;
@@ -26,17 +39,17 @@ section.highlights {
           left: 1rem;
           width: calc(100vw - 3rem);
           max-width: 35rem;
-          background-color: $white-color;
+          background-color: var(--light-color);
           padding: 1.5rem 1rem 1rem 1.7rem;
           border-radius: 4rem 0 4rem 0;
           button {
             @include primary-btn;
             margin: 1rem 0;
-            font-weight: $bold;
+            font-weight: var(--bold);
           }
           p {
-            color: $grey-color;
-            font-weight: $bold;
+            color: var(--grey-color);
+            font-weight: var(--bold);
           }
         }
       }
@@ -51,15 +64,15 @@ section.highlights {
     width: calc(100vw - 2rem);
     padding: 0 1rem;
     button {
-      height: 2rem;
-      width: 2rem;
+      height: 2.3rem;
+      width: 2.3rem;
       border-radius: 50%;
+      background-color: var(--light-color);
     }
   }
 }
 @media screen and (min-width: 768px) {
   section.highlights {
-    margin-bottom: 5rem;
     .carousel {
       .slide {
         figure {

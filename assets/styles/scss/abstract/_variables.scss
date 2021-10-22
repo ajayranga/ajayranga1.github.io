@@ -1,15 +1,24 @@
-$primary-color: #0abf53;
-$dark-color: #060606;
-$grey-color: #707070;
-$light-color: #f2f2f2;
-$white-color: #ffffff;
-$bg-color: #fbfbfb;
-$translucent-color: rgba($dark-color, 0.6);
-$border-color: rgba($grey-color, 0.2);
-$light-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans,
-  Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-$bold-font: 'Gemunu-Libre-bold';
-$padding-mob: 0.75rem 0.75rem;
-$animation-time: 0.4s;
-$bold: 700;
-$bolder: 800;
+:root {
+  --primary-color: #0abf53;
+  --dark-color: #171717;
+  --black-color: #171717;
+  --extra-black-color: #0c0b0b;
+  --grey-color: #707070;
+  --light-grey-color: #aaaaaa;
+  --cloudy-color: #f2f2f2;
+  --light-color: #ffffff;
+  --white-color: #ffffff;
+  --bg-color: #fbfbfb;
+  --bg-2-color: #fffcfc17;
+  --bg-layer: #00000000;
+  --translucent-color: #000000a1;
+  --shadow-color: #00000014;
+  --shadow-2-color: #00000069;
+  --light-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --bold-font: 'Gemunu-Libre-bold';
+  --padding-mob: 0.75rem 0.75rem;
+  --animation-time: 0.4s;
+  --bold: 700;
+  --bolder: 800;
+}

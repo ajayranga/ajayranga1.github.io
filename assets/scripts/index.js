@@ -11,9 +11,7 @@ searchBtn.addEventListener('click', (e) => {
 searchBtn.previousElementSibling.addEventListener('focusout', (e) => {
   searchBtn.parentElement.classList.toggle('open');
 });
-themeBtn.addEventListener('click', () => {
-  themeBtn.classList.toggle('dark');
-});
+
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('active');
   menuBtn.parentElement.nextElementSibling.children[0].classList.toggle(
@@ -108,13 +106,35 @@ carousel2Dots.forEach((itm) => {
     carousel2.style.marginLeft = (-dotIndex * 100).toString() + 'vw';
   });
 });
-//themeing
+// //themeing
 const darkMode = window.matchMedia('(prefers-color-schema: dark)').matches;
 
 if (!localStorage.getItem('current-theme'))
-  localStorage.setItme('current-theme', darkMode ? 'dark' : 'default');
-else if (localStorage.getItem('current-theme') === 'dark') {
-  alert('dark');
-} else if (localStorage.getItem('current-theme') === 'default') {
-  alert('default');
-}
+  localStorage.setItem('current-theme', darkMode ? 'dark' : 'default');
+const applyDarkTheme = () => {
+  document.querySelector(':root').style.setProperty('--dark-color', '#ffffff');
+  document.querySelector(':root').style.setProperty('--light-color', '#171717');
+  document.querySelector(':root').style.setProperty('--bg-color', '#0c0b0b');
+  document
+    .querySelector(':root')
+    .style.setProperty('--shadow-color', '#100909');
+};
+const applyDefaultTheme = () => {
+  document.querySelector(':root').style.setProperty('--dark-color', '#171717');
+  document.querySelector(':root').style.setProperty('--light-color', '#ffffff');
+  document.querySelector(':root').style.setProperty('--bg-color', '#fbfbfb');
+  document
+    .querySelector(':root')
+    .style.setProperty('--shadow-color', '#00000014');
+};
+themeBtn.addEventListener('click', () => {
+  if (themeBtn.classList.contains('dark')) {
+    themeBtn.classList.remove('dark');
+    localStorage.setItem('current-theme', 'default');
+    applyDefaultTheme();
+  } else {
+    themeBtn.classList.add('dark');
+    localStorage.setItem('current-theme', 'dark');
+    applyDarkTheme();
+  }
+});

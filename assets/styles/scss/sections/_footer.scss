@@ -1,13 +1,12 @@
 footer {
-  background-color: $dark-color;
+  background-color: var(--extra-black-color);
   @include bold-grey-font;
   padding-top: 2rem;
   .container {
     .row {
-      border-bottom: 1px solid $border-color;
       padding: 1.5rem 0;
       .col {
-        padding: 1rem;
+        padding: 1rem 1rem 0;
         .social-links {
           @include flex-center;
           justify-content: flex-start;
@@ -15,18 +14,23 @@ footer {
             margin-right: 0.7rem;
             height: 2.5rem;
             width: 2.5rem;
-            background-color: $border-color;
+            background-color: var(--bg-2-color);
             border-radius: 50%;
             @include flex-center;
             justify-content: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
             i {
-              color: $light-color;
+              color: var(--white-color);
               margin-right: 0;
+            }
+            &:hover {
+              background-color: var(--primary-color);
             }
           }
         }
         h4 {
-          color: $light-color;
+          color: var(--white-color);
         }
         ul {
           li {
@@ -36,7 +40,7 @@ footer {
             }
             span {
               a {
-                color: $grey-color;
+                color: var(--grey-color);
               }
             }
           }
@@ -51,15 +55,18 @@ footer {
             padding-bottom: 0.8rem;
           }
           button {
-            background-color: $primary-color;
+            background-color: var(--primary-color);
             margin-left: 0;
             padding: 0.8rem 1.5rem;
             i {
-              color: $light-color;
+              color: var(--white-color);
             }
           }
         }
       }
+    }
+    .row1 {
+      border-bottom: 1px solid var(--bg-2-color);
     }
     .row2 {
       .col2,
@@ -102,8 +109,20 @@ footer {
         }
       }
       .row2 {
-        grid-template-columns: 48% auto 30%;
+        grid-template-columns: 41% 25% 25%;
         border-bottom: none;
+        .col {
+          ul {
+            li {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              span {
+                word-break: break-all;
+              }
+            }
+          }
+        }
         .col2,
         .col3 {
           ul {

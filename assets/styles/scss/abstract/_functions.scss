@@ -5,14 +5,14 @@
 }
 
 @mixin primary-btn {
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   padding: 0.85rem 1.5rem;
-  color: $light-color;
+  color: var(--white-color);
 }
 
 @mixin bold-grey-font {
-  font-weight: $bold;
-  color: $grey-color;
+  font-weight: var(--bold);
+  color: var(--grey-color);
 }
 @mixin centerIt {
   display: flex;

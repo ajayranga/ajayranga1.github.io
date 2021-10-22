@@ -14,29 +14,38 @@ section.query {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-color: $translucent-color;
+    background-color: var(--translucent-color);
     z-index: -1;
   }
   .container {
     h2 {
-      color: $light-color;
+      color: var(--white-color);
     }
     p {
-      color: $light-color;
-      font-weight: $bold;
+      color: var(--white-color);
+      font-weight: var(--bold);
     }
     .btns-container {
       margin: 1.5rem 0;
       button {
         padding: 0.9rem 1.5rem;
-        font-weight: $bold;
+        font-weight: var(--bold);
         &:first-child {
           margin-right: 0.5rem;
+          color: var(--black-color);
+          &:hover {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+          }
         }
         &:last-child {
-          color: $light-color;
-          background-color: $primary-color;
+          color: var(--white-color);
+          background-color: var(--primary-color);
           margin-top: 1.25rem;
+          &:hover {
+            background-color: var(--white-color);
+            color: var(--black-color);
+          }
         }
       }
     }
